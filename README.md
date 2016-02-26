@@ -10,24 +10,26 @@ In the context of the credit risk modelling, some of the relevant macroeconomic 
 * Interest rate <br />
 * Housing price index <br />
 
-# Methods #
-The simplest interest rate model is the Vasicek model. 
-Its Euler discretization corresponds to a first order autoregressive model. 
-
-/n
-
 For forecasting, it is important for the models to be causal, which implies bounded prediction errors.
 Stationary models converge to a mean value, hence, for long-term predictions, one must incorporate opinions from experts.
 
+# Modelling #
+The simplest interest rate model is the Vasicek model. 
+Its Euler discretization corresponds to a first order autoregressive model. 
 
-# Model #
+<br />
+
 A VAR(1) model is fitted to the available historical time series for the variables (GDP, unemployment, interest rate). 
 This helps to see the structural dependency of them.
-/n
+
+<br />
 
 There are ways to improve this simplistic approach.
-Since we are interested in a limited number of variables in the Portuguese economy, 
-we can have recession as an external drive, and the other variables reacting to it.
+Since we are interested in a limited number of variables in a particular country (Portugal in our case), 
+we can think of recession as an external drive, and the other variables reacting to it.
+One way to do it is to have recession as a binary variable, i.e. 1 when it happens, and 0 otherwise.
+We can also use a variable as a proxy to it. In our simple approach, the interest rate actually plays such role.
+Another proxy can be the US unemployment rate, since one can read the recessions easily from it.
 
 
 
