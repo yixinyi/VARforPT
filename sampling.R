@@ -1,5 +1,4 @@
-# Copyright (c) 2016 Xinyi Chen Lin, under the MIT License: https://opensource.org/licenses/MIT
-# It contains sampling and fitting functions to study autoregressive models of 1 lag.
+# This file contains sampling and fitting functions to study autoregressive models of 1 lag.
 # List of functions:
 #     samplingVAR
 #     samplingAR
