@@ -1,8 +1,8 @@
 # Economic scenarios for credit risk #
-This project aims at forecasting economic scenarios for credit risk. 
+This project aims at forecasting economic scenarios for the credit risk. 
 It is motivated by the IFRS 9 reglamentation. 
 
-# Introduction #
+## Introduction ##
 An economic scenario is defined by the time series of a set of economic variables.
 In the context of the credit risk modelling, some of the relevant macroeconomic variables are:
 * GDP <br />
@@ -13,16 +13,15 @@ In the context of the credit risk modelling, some of the relevant macroeconomic 
 For forecasting, it is important for the models to be causal, which implies bounded prediction errors.
 Stationary models converge to a mean value, hence, for long-term predictions, one must incorporate opinions from experts.
 
-# Modelling #
+## Modelling ##
 The simplest interest rate model is the Vasicek model. 
 Its Euler discretization corresponds to a first order autoregressive model. 
 
-<br />
 
-A VAR(1) model is fitted to the available historical time series for the variables (GDP, unemployment, interest rate). 
-This helps to see the structural dependency of them.
 
-<br />
+A VAR(1) model is fitted to the available historical time series for the variables: GDP, unemployment and interest rate. 
+The result is that the interest rate depends very little on the otehr variables.
+
 
 There are ways to improve this simplistic approach.
 Since we are interested in a limited number of variables in a particular country (Portugal in our case), 
@@ -33,7 +32,7 @@ Another proxy can be the US unemployment rate, since one can read the recessions
 
 
 
-# References #
+## References ##
 * https://onlinecourses.science.psu.edu/stat510 <br />
 
 
