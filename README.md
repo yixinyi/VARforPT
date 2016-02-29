@@ -52,4 +52,4 @@ Higher order models can also be used, but I think this doesn't improve much the 
 # Acknoweledgement #
 This project started at Deloitte Portugal, Lisbon.
 I would like to thank Filipe Correia for his supervision, 
-and the [GATIS network] (gatis.desy.eu) for the financial support.
+and the [GATIS network] (http://gatis.desy.eu) for the financial support.
