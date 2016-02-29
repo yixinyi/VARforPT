@@ -11,17 +11,23 @@ In the context of the credit risk modelling, some of the relevant macroeconomic 
 * Housing price index <br />
 
 For forecasting, it is important for the models to be causal, which implies bounded prediction errors.
-Stationary models converge to a mean value, hence, for long-term predictions, one must incorporate opinions from experts.
+Stationary models converge to their mean value asymptotically, hence, for richer long-term predictions, one must incorporate opinions from experts.
 
 ## Modelling ##
-The simplest interest rate model is the Vasicek model. 
-Its Euler discretization corresponds to a first order autoregressive model. 
+
+### AR(1) ###
+The simplest interest rate model is the Vasicek model (an [Ornstein–Uhlenbeck process] (https://en.wikipedia.org/wiki/Ornstein%E2%80%93Uhlenbeck_process)).
+The discretization of the stochastic differenctial equation corresponds to a first order autoregression model, i.e. AR(1). 
+When a time-dependent mean value is considered, the model is called Hull-White. 
+See **interestRate.R**, where the European short-term interest rate (or Euribor) is used.
 
 
 
-A VAR(1) model is fitted to the available historical time series for the variables: GDP, unemployment and interest rate. 
-The result is that the interest rate depends very little on the otehr variables.
+### VAR(1) ###
+A VAR(1) model is fitted using the **vars** package, to the available historical time series for the variables: GDP, unemployment and interest rate, for Portugal. It is done in **varPT.R**, where I also use my own Monte Carlo sampling function to simulate the future evolution. However, this differs from the result from the **predict** function in **vars**. 
 
+
+## What to do next ##
 
 There are ways to improve this simplistic approach.
 Since we are interested in a limited number of variables in a particular country (Portugal in our case), 
@@ -34,6 +40,7 @@ Another proxy can be the US unemployment rate, since one can read the recessions
 
 ## References ##
 * https://onlinecourses.science.psu.edu/stat510 <br />
+* http://www.bportugal.pt/Mobile/BPStat/DominiosEstatisticos.aspx <br />
 
 
 # Acknoweledgement #
