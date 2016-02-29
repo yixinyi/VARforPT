@@ -1,6 +1,6 @@
-# Economic scenarios for credit risk #
-This project aims at forecasting economic scenarios for the credit risk. 
-It is motivated by the IFRS 9 reglamentation. 
+# Generate economic scenarios #
+This project aims at forecasting economic scenarios relevant for computing the expected loss due to defaults. 
+It is motivated by the [IFRS 9] (http://www.ifrs.org/current-projects/iasb-projects/financial-instruments-a-replacement-of-ias-39-financial-instruments-recognitio/documents/ifrs-9-project-summary-july-2014.pdf) reglamentation. 
 
 ## Introduction ##
 An economic scenario is defined by the time series of a set of economic variables.
@@ -11,7 +11,7 @@ In the context of the credit risk modelling, some of the relevant macroeconomic 
 * Housing price index <br />
 
 For forecasting, it is important for the models to be causal, which implies bounded prediction errors.
-Stationarity is often assumed when fitting a time series model, which means that the forecast converges to an asymptotic mean value. Hence, for richer long-term predictions, one can incorporate opinions from experts, namely, adding a time-dependent mean function.
+Stationarity is often assumed when fitting a time series model, which means that the forecast converges to an asymptotic mean value. Hence, for richer long-term predictions, one can incorporate opinions from experts, e.g., adding a time-dependent mean function.
 
 
 ## Modelling ##
