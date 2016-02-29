@@ -11,7 +11,7 @@ In the context of the credit risk modelling, some of the relevant macroeconomic 
 * Housing price index <br />
 
 For forecasting, it is important for the models to be causal, which implies bounded prediction errors.
-Stationarity is often assumed when fitting a time series model, which means that the forecast converges to an asymptotic mean value. Hence, for richer long-term predictions, one can incorporate opinions from experts, e.g., adding a time-dependent mean function.
+Stationarity is often assumed when fitting a time series model, which means that the forecast converges to an asymptotic mean value. Hence, for richer long-term predictions, one can incorporate opinions from experts, e.g. adding a time-dependent mean function.
 
 
 ## Modelling ##
@@ -23,7 +23,7 @@ When a time-dependent mean value is considered, the model is called Hull-White.
 See **interestRate.R**, where the European short-term interest rate (or Euribor) is studied. 
 
 ### VAR(1) ###
-A VAR(1) model is fitted using the **vars** package, to the available historical time series for the variables: GDP, unemployment and interest rate, for Portugal. It is done in **varPT.R**, where I also use my own Monte Carlo sampling function to simulate the future evolution. However, this differs from the result from the **predict** function in **vars**. 
+A VAR(1) model with linear trend is fitted using the **vars** package, to the available historical time series for the variables: GDP, unemployment and interest rate, for Portugal. It is done in **varPT.R**, where I also use my own Monte Carlo sampling function to simulate the future evolution. However, this differs from the result from the **predict** function in **vars**. 
 
 The fit suggests that the interest rate depends very little on the other variables, hence, we can think of it being a cause. This can be justified as interest rates reacting earlier to the recession. 
 
@@ -36,7 +36,7 @@ For example, we can consider recession as a binary variable, i.e. 1 when it happ
 
 Note that I didn't add housing price index into my VAR(1) model. That is due to the lack of quartely data of it (I have only yearly data). We can study its dependence with the yearly time series of the other variables by, e.g., the least squared error method, as it is how was done in the **vars** package for each equation in the VAR(1) model. 
 
-Higher order models can also be used, but I think this doesn't improve much the long-term forecast anyways, so don't overfit the data and keep the structual dependecies simple. 
+Higher order models can also be used, but I think this doesn't improve much the long-term forecast anyways, so it is better not to overfit the data and keep the structual dependecies simple. 
 
 
 
@@ -52,4 +52,4 @@ Higher order models can also be used, but I think this doesn't improve much the 
 # Acknoweledgement #
 This project started at Deloitte Portugal, Lisbon.
 I would like to thank Filipe Correia for his supervision, 
-and the GATIS network for the financial support.
+and the [GATIS network] (gatis.desy.eu) for the financial support.
