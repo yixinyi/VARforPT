@@ -11,7 +11,7 @@ In the context of the credit risk modelling, some of the relevant macroeconomic 
 * Housing price index <br />
 
 For forecasting, it is important for the models to be causal, which implies bounded prediction errors.
-Stationarity is often assumed when fitting a time series model, which means that the forecast converges to an asymptotic mean value. Hence, for richer long-term predictions, one can incorporate opinions from experts, e.g. adding a time-dependent mean function.
+Stationarity is often assumed when fitting a time series model, which means that the forecast converges to an asymptotic mean value. Hence, for richer long-term predictions, one usually incorporates opinions from experts, e.g. by adding a time-dependent mean function.
 
 
 ## Modelling ##
@@ -25,7 +25,7 @@ See **interestRate.R**, where the European short-term interest rate (or Euribor)
 ### VAR(1) ###
 A VAR(1) model with linear trend is fitted using the **vars** package, to the available historical time series for the variables: GDP, unemployment and interest rate, for Portugal. It is done in **varPT.R**, where I also use my own Monte Carlo sampling function to simulate the future evolution. However, this differs from the result from the **predict** function in **vars**. 
 
-The fit suggests that the interest rate depends very little on the other variables, hence, we can think of it being a cause. This can be justified as interest rates reacting earlier to the recession. 
+The fit suggests that the interest rate depends very little on the other variables. We can interpret the interest rate as reacting earlier to the recession, then the other indicators follow.  
 
 
 ## Discussion ##
