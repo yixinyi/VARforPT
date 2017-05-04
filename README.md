@@ -1,6 +1,6 @@
 # Generate economic scenarios #
 This project aims at forecasting economic scenarios relevant for computing the expected loss due to defaults. 
-It is motivated by the [IFRS 9] (http://www.ifrs.org/current-projects/iasb-projects/financial-instruments-a-replacement-of-ias-39-financial-instruments-recognitio/documents/ifrs-9-project-summary-july-2014.pdf) reglamentation. 
+It is motivated by the [IFRS 9](http://www.ifrs.org/current-projects/iasb-projects/financial-instruments-a-replacement-of-ias-39-financial-instruments-recognitio/documents/ifrs-9-project-summary-july-2014.pdf) reglamentation. 
 
 ## Introduction ##
 An economic scenario is defined by the time series of a set of economic variables.
@@ -17,7 +17,7 @@ Stationarity is often assumed when fitting a time series model, which means that
 ## Modelling ##
 
 ### AR(1) ###
-The simplest interest rate model is the Vasicek model (an [Ornstein–Uhlenbeck process] (https://en.wikipedia.org/wiki/Ornstein%E2%80%93Uhlenbeck_process)).
+The simplest interest rate model is the Vasicek model (an [Ornstein–Uhlenbeck process](https://en.wikipedia.org/wiki/Ornstein%E2%80%93Uhlenbeck_process)).
 The discretization of the stochastic differential equation corresponds to a first order autoregression model, i.e. AR(1). 
 When a time-dependent mean value is considered, the model is called Hull-White. 
 See **interestRate.R**, where the European short-term interest rate (or Euribor) is studied. 
@@ -52,4 +52,5 @@ Higher order models can also be used, but I think this doesn't improve much the 
 # Acknoweledgement #
 This project started at Deloitte Portugal, Lisbon.
 I would like to thank Filipe Correia for his supervision, 
-and the [GATIS network] (http://gatis.desy.eu) for the financial support.
+and the [GATIS network](http://gatis.desy.eu) for the financial support.
+
