@@ -46,7 +46,7 @@ Higher order models can also be used, but I think this doesn't improve much the 
 * https://onlinecourses.science.psu.edu/stat510 <br />
 * http://www.bportugal.pt/Mobile/BPStat/DominiosEstatisticos.aspx <br />
 * https://data.oecd.org <br />
-* An example of [a long-term forward economic scenario] (http://www.oecd.org/officialdocuments/publicdisplaydocumentpdf/?cote=ECO/WKP(2012)77&docLanguage=En), from OECD.
+* An example of [a long-term forward economic scenario](http://www.oecd.org/officialdocuments/publicdisplaydocumentpdf/?cote=ECO/WKP(2012)77&docLanguage=En), from OECD.
 
 
 # Acknoweledgement #
